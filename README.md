@@ -47,9 +47,13 @@ $ vagrant ssh
 ### Compiling LaTeX into PDF
 
 ```
-$ cd /vagrant
-$ vi tex/sample.tex
-$ cd tex
+# move to shared folder
+$ cd /vagrant/sample
+# edit latex file
+# this is a very simple sample
+$ vi sample.tex
+# convert script
+# please change its content according to your latex file name
 $ ./convert.sh
 ```
 
