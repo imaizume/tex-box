@@ -1,11 +1,21 @@
-Virtual Machine for Tex Compilation into PDF
+Virtual Machine for LaTeX Compiling into PDF
 ===
 
 Introduction
 ---
 
-This is a virtual environment of [Vagrant](https://www.vagrantup.com/) that enables non-unix like OS users such as Windows to compile `.tex` (LaTeX) file into `.pdf` (PDF).
-You can get created PDF through the shared folder in the host OS.
+This is a virtual environment by [Vagrant](https://www.vagrantup.com/) that enables Non-Unix like OS such as Windows to compile `.tex` (LaTeX) file into `.pdf` (PDF).
+
+When provisioning this VM, all of required tool sets are installed by shellscript.
+
+So you can easily create PDF and achieve it through the shared folder in the host OS.
+
+Important Note
+---
+
+**Sample LaTeX sources and compiling shellscript are extracted into [another project](https://www.github.com/imaizume/tex-sources).**
+
+Just clone it into shared folder *as a git submopdule*.
 
 Requirement
 ---
@@ -43,19 +53,6 @@ $ vagrant ssh
 * HOST: 22
 * User: vagrant
 * Pass: vagrant
-
-### Compiling LaTeX into PDF
-
-```
-# move to shared folder
-$ cd /vagrant/sample
-# edit latex file
-# this is a very simple sample
-$ vi sample.tex
-# convert script
-# please change its content according to your latex file name
-$ ./convert.sh
-```
 
 Other
 ------
